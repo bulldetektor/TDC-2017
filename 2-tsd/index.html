@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Hello</title>
+</head>
+
+<body>
+	<h1>jQuery</h1>
+	<h2 style="opacity:0">Powered by TypeScript</h2>
+	
+	<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src=".dist/index.js"></script> -->
+	<!-- <script>
+		new TsdDemo();
+	</script> -->
+	
+	<script src="node_modules/systemjs/dist/system.js"></script>
+	<script>
+		SystemJS.import('.dist/index.js');
+		new TsdDemo();
+	</script>
+	
+</body>
+
+</html>
