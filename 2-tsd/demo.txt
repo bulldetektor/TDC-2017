@@ -1,0 +1,24 @@
+1-imports
+Normalt sett vil man bruke modul-lasting via import i TS
+Da kjører man npm install og bundler 3dje-parts biblioteker
+Krever at man bruker module loader, feks WebPack el SystemJs, for at import skal funke i JS runtime
+
+2-refs
+Et annet alternativ er at man bruker reference paths
+Dette er kun for å fortele TS kompilatoren hvor type definisjon
+finnes slik at man får intellisens og type-støtte
+
+3-declare
+En 3dje måte å gjøre det på er å rett og slett drite i type-definisjonene
+Her gir man rett og slett kompilatoren beskjed om at her er det ikke
+noe type-sjekking. For biblioteker som har litt guffene tsd'er så
+er dette en grei løsning.
+Krever at man sørger for å laste inn bibliotekene i riktig rekkefølge i script-tager
+Kan da laste fra Content Delivery Network eller bruke f.eks. script-bundlinga
+i asp.net
+
+4-cast
+En fjerde mulighet; casting. Her deklareres ikke jQuery,
+men vi kjører en cast av jQuery til any. Har samme effekt 
+som å deklarere. Brukes typisk på jquery plugins uten
+tsd'er.
