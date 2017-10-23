@@ -3,16 +3,10 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 class MockingDemo {
     constructor() {
-        JQuery.select("h2").animate({ opacity: 1 }, 1500);
+        $("h2").animate({ opacity: 1 }, 1500);
     }
 }
 exports.MockingDemo = MockingDemo;
-class JQuery {
-    static select(selector) {
-        return $(selector);
-    }
-}
-exports.JQuery = JQuery;
 
 },{}]},{},[1])(1)
 });
