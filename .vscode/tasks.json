@@ -4,9 +4,27 @@
 	"version": "2.0.0",
 	"tasks": [
 		{
-			"taskName": "echo",
+			"taskName": "tdd",
 			"type": "shell",
-			"command": "echo Hello"
+			"command": "mocha",
+			"args": [
+				"-r",
+				"ts-node/register",
+				"-R",
+				"min",
+				"-w",
+				"3-mocks/tests/*.tests.ts"
+			],
+			"group": {
+				"kind": "test",
+				"isDefault": true
+			},
+			"presentation": {
+				"echo": true,
+				"reveal": "always",
+				"focus": false,
+				"panel": "dedicated"
+			}
 		}
 	]
 }
